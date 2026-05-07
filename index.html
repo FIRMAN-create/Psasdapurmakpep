@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Mak Pep - Nasi Box & Catering</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Logo Dapur MakPeb" class="logo-img">
+            <div class="logo-text">
+                <span class="brand">DAPUR MAK PEP</span>
+                <span class="tagline">CATERING SERVICE</span>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#menu-prasmanan">Menu</a>
+            <a href="#keunggulan-section">Keunggulan</a>
+            <a href="#">Beranda</a>
+            <a href="#testimoni-section">Testimoni</a>
+            <a href="#kontak-section">Kontak</a>
+            <button class="btn-wa"><i class="fab fa-whatsapp"></i> Pesan Sekarang</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Nasi Box untuk seluruh acara <br> <span class="highlight">cepat dan hemat!!</span></h1>
+            <p>Nikmati sajian lezat dengan tampilan masakan rumahan dan berkelas. Pilihan menu terbaik dari Nusantara untuk momen spesial Anda.</p>
+            <div class="checklist">
+                <div class="check-item"><i class="fas fa-check-circle"></i> Rasa Enak & Konsisten</div>
+                <div class="check-item"><i class="fas fa-check-circle"></i> Gratis Ongkir Hemat Biaya</div>
+                <div class="check-item"><i class="fas fa-check-circle"></i> Bersertifikat Halal & SLHS</div>
+                <div class="check-item"><i class="fas fa-check-circle"></i> Terima Ratusan Pesanan</div>
+            </div>
+            <div class="hero-btns">
+                <button class="btn-primary">Konsultasi Menu Sekarang</button>
+                <button class="btn-secondary">Minta Penawaran Harga</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-container">
+                <img src="makan.jpeg" alt="Nasi Box">
+                <div class="badge-float">
+                    <i class="fas fa-star"></i>
+                    <div><strong>Setup Mewah</strong><span>Estetik & Higienis</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="keunggulan-section">
+        <span class="sub-title">~ Kenapa Memilih Kami ~</span>
+        <h2>Kenapa Banyak Event Memilih Dapur Mak Pep?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-star gold"></i>
+                <h3>Rasa Premium</h3>
+                <p>Resep autentik keluarga dengan bahan-bahan pilihan berkualitas tinggi.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gem gold"></i>
+                <h3>Tampilan Elegan</h3>
+                <p>Packaging rapi dan estetik, cocok untuk acara formal maupun santai.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-certificate purple"></i>
+                <h3>Sertifikat Halal</h3>
+                <p>Seluruh proses produksi terjamin kehalalannya oleh MUI.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt green"></i>
+                <h3>Sertifikat SLHS</h3>
+                <p>Memenuhi standar Higiene Sanitasi Pangan untuk keamanan konsumsi.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-utensils gold"></i>
+                <h3>Menu Variatif</h3>
+                <p>Ratusan pilihan menu Nusantara yang bisa disesuaikan dengan selera.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-calendar-check gold"></i>
+                <h3>Tepat Waktu</h3>
+                <p>Komitmen pengiriman tepat waktu untuk menjaga kesuksesan acara Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu-prasmanan">
+        <span class="sub-title">~ Layanan Kami ~</span>
+        <h2>Prasmanan & Catering Nasi box</h2>
+        <div class="package-container">
+            <div class="package-card" id="card-nasibox">
+                <div class="card-header"><h3>Nasi Box</h3><span class="badge">3 Paket</span></div>
+                <div class="image-slider">
+                    <img src="box.jpeg" alt="Nasi Box">
+                    <button class="prev" onclick="moveSlide('nasibox', -1)"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next" onclick="moveSlide('nasibox', 1)"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="card-body">
+                    <h4 class="pkg-name"></h4>
+                    <p class="price"></p>
+                    <div class="mini-menu-list"></div>
+                    <button class="btn-pilih">Pilih Paket</button>
+                    <div class="dots-container"></div>
+                </div>
+            </div>
+
+            <div class="package-card" id="card-tumpeng">
+                <div class="card-header"><h3>Nasi Tumpeng</h3><span class="badge">3 Paket</span></div>
+                <div class="image-slider">
+                    <img src="tumpeng.jpeg" alt="Nasi Tumpeng">
+                    <button class="prev" onclick="moveSlide('tumpeng', -1)"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next" onclick="moveSlide('tumpeng', 1)"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="card-body">
+                    <h4 class="pkg-name"></h4>
+                    <p class="price"></p>
+                    <div class="mini-menu-list"></div>
+                    <button class="btn-pilih">Pilih Paket</button>
+                    <div class="dots-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-detail-grid">
+            <div class="detail-box">
+                <div class="detail-title"><i class="fas fa-list-ul"></i> Pilihan Menu Prasmanan</div>
+                <div class="detail-content">
+                    <div class="menu-column">
+                        <div class="category">DAGING SAPI</div>
+                        <ul><li>Semur Daging</li><li>Rendang</li><li>Daging Oseng Cabai Hijau</li></ul>
+                        <div class="category">AYAM</div>
+                        <ul><li>Ayam Goreng Mentega</li><li>Ayam Bakar Kecap</li><li>Ayam Kremes</li></ul>
+                        <div class="category">CA / OSENG</div>
+                        <ul><li>Capcay Goreng</li><li>Ca Buncis Jagung Manis</li></ul>
+                    </div>
+                    <div class="menu-column">
+                        <div class="category">SEAFOOD</div>
+                        <ul><li>Udang Goreng Tepung</li><li>Cumi Saus Padang</li><li>Ikan Asam Manis</li></ul>
+                        <div class="category">MASAKAN OLAHAN</div>
+                        <ul><li>Sambel Goreng Ati Ampela</li><li>Mie Goreng Spesial</li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="detail-title"><i class="fas fa-list-ul"></i> Pilihan lauk nasi tumpeng</div>
+                <div class="detail-content">
+                    <div class="menu-column">
+                        <div class="category">LAUK TUMPENG</div>
+                        <ul><li>Perkedel</li><li>Ayam Goreng</li><li>Kering Tempe Kacang</li><li>Urap Sayur</li><li>Telur Balado</li></ul>
+                    </div>
+                    <div class="menu-column">
+                        <div class="category">NASI</div>
+                        <ul><li>Nasi Liwet</li><li>Nasi Kuning</li><li>Nasi Merah</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testi-section" id="testimoni-section">
+        <span class="sub-title">~ Testimoni ~</span>
+        <h2>Apa Kata Pelanggan Kami?</h2>
+        <div class="testi-grid">
+            <div class="testi-card">
+                <div class="testi-header">
+                    <div class="avatar avatar-1">A</div>
+                    <div class="user-meta"><strong>Pak RT</strong><span><i class="fas fa-users"></i> Acara Syukuran</span></div>
+                </div>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testi-text">"Alhamdulillah acara syukuran berjalan lancar berkat Dapurmakpep. Makanannya enak, tampilannya rapi dan premium."</p>
+                <div class="testi-verified"><i class="fas fa-check-circle"></i> Diverifikasi via WhatsApp</div>
+            </div>
+            <div class="testi-card">
+                <div class="testi-header">
+                    <div class="avatar avatar-2">S</div>
+                    <div class="user-meta"><strong>SMPN 1 Jatilawang</strong><span><i class="fas fa-users"></i> Acara Sekolah</span></div>
+                </div>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testi-text">"Kami mempercayakan kebutuhan catering kepada Dapurmakpep dan hasilnya sangat memuaskan. Rasa enak dan konsisten."</p>
+                <div class="testi-verified"><i class="fas fa-check-circle"></i> Diverifikasi via WhatsApp</div>
+            </div>
+            <div class="testi-card">
+                <div class="testi-header">
+                    <div class="avatar avatar-3">S</div>
+                    <div class="user-meta"><strong>SMPN 1 Wangon</strong><span><i class="fas fa-users"></i> Acara Umum</span></div>
+                </div>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testi-text">"Makanannya enak, pilihan variatif, tampilannya menarik, dan pelayanan sangat baik. Proses pemesanan cepat."</p>
+                <div class="testi-verified"><i class="fas fa-check-circle"></i> Diverifikasi via WhatsApp</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="kontak-section">
+        <div class="cta-container">
+            <h2>Siap Buat Acara Anda Lebih Berkesan?</h2>
+            <p>Diskusikan kebutuhan catering Anda bersama tim kami. Kami siap membantu dari perencanaan hingga penyajian.</p>
+            <a href="https://wa.me/6285169938164" class="btn-cta-wa" target="_blank">
+                <i class="fab fa-whatsapp"></i> Hubungi Kami Sekarang
+            </a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="f-logo-wrap">
+                    <img src="logo.jpeg" alt="Logo">
+                    <div class="f-logo-text">
+                        <span class="f-brand">Dapur MakPeb</span>
+                        <span class="f-tagline">CATERING</span>
+                    </div>
+                </div>
+                <h3 class="f-slogan">Rasa Masakan Ibu!!</h3>
+            </div>
+            <div class="footer-nav">
+                <div class="f-nav-col">
+                    <h4>Menu Nasi Box</h4>
+                    <ul>
+                        <li><a href="#menu-prasmanan">Paket Silver</a></li>
+                        <li><a href="#menu-prasmanan">Paket Gold</a></li>
+                        <li><a href="#menu-prasmanan">Paket Platinum</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Hubungi Kami</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> <span>Kec Jatilawang, Desa Kedungwringin, RT 04 RW 03</span></li>
+                    <li><i class="fas fa-phone-alt"></i> <span>085169938164</span></li>
+                    <li><i class="fas fa-envelope"></i> <span>liantolr8@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dapur MakPeb. Melayani pelanggan dengan suka cita</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6285169938164" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        const data = {
+            nasibox: { currentIndex: 0, packages: [
+                { name: 'Paket Silver <span class="tag-status">Hemat</span>', price: 'Rp 40.000', menu: ['Nasi Putih', 'Ayam Goreng', 'Capcay', 'Buah & Air'] },
+                { name: 'Paket Gold', price: 'Rp 50.000', menu: ['Nasi Kuning', 'Ayam Bakar', 'Sambal', 'Buah & Air'] },
+                { name: 'Paket Platinum', price: 'Rp 60.000', menu: ['Nasi Goreng', 'Ayam Goreng Kremes', 'Telor Ceplok', 'Buah & Air'] }
+            ]},
+            tumpeng: { currentIndex: 0, packages: [
+                { name: 'Silver Ekonomis', price: 'Rp 90.000', menu: ['Nasi Putih', 'Semur Telur', 'Mie Jawa', 'Sambal'] },
+                { name: 'Gold Ekonomis', price: 'Rp 110.000', menu: ['Nasi Kuning', 'Telur Balado', 'Perkedel', 'Sambal'] },
+                { name: 'Platinum Ekonomis', price: 'Rp 120.000', menu: ['Nasi Liwet', 'Rendang', 'Urap Sayur', 'Sambal'] }
+            ]}
+        };
+        function moveSlide(type, dir) { 
+            let item = data[type]; 
+            item.currentIndex = (item.currentIndex + dir + item.packages.length) % item.packages.length; 
+            renderCard(type); 
+        }
+        function renderCard(type) {
+            const card = document.getElementById(`card-${type}`); 
+            const pkg = data[type].packages[data[type].currentIndex];
+            card.querySelector('.pkg-name').innerHTML = pkg.name; 
+            card.querySelector('.price').innerText = pkg.price;
+            card.querySelector('.mini-menu-list').innerHTML = pkg.menu.map(m => `<span><i class="fas fa-check"></i> ${m}</span>`).join('');
+            card.querySelector('.dots-container').innerHTML = data[type].packages.map((_, i) => `<span class="dot ${i === data[type].currentIndex ? 'active' : ''}"></span>`).join('');
+        }
+        renderCard('nasibox'); renderCard('tumpeng');
+    </script>
+</body>
+</html>
